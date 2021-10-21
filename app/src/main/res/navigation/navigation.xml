@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/ladningInput">
+
+    <fragment
+        android:id="@+id/ladningInput"
+        android:name="com.example.cm3110.LadningInput"
+        android:label="fragment_ladning_input"
+        tools:layout="@layout/fragment_ladning_input" >
+        <action
+            android:id="@+id/action_ladningInput_to_goals"
+            app:destination="@id/goals" />
+    </fragment>
+    <fragment
+        android:id="@+id/goals"
+        android:name="com.example.cm3110.Goals"
+        android:label="fragment_goals"
+        tools:layout="@layout/fragment_goals" >
+        <action
+            android:id="@+id/action_goals_to_exerciseAmount"
+            app:destination="@id/exerciseAmount" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseAmount"
+        android:name="com.example.cm3110.ExerciseAmount"
+        android:label="fragment_exercise_amount"
+        tools:layout="@layout/fragment_exercise_amount" >
+        <action
+            android:id="@+id/action_exerciseAmount_to_mainPage"
+            app:destination="@id/mainPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainPage"
+        android:name="com.example.cm3110.MainPage"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPage_to_workouts"
+            app:destination="@id/workouts" />
+        <action
+            android:id="@+id/action_mainPage_to_food"
+            app:destination="@id/food" />
+        <action
+            android:id="@+id/action_mainPage_to_userInfo"
+            app:destination="@id/userInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/workouts"
+        android:name="com.example.cm3110.Workouts"
+        android:label="fragment_workouts"
+        tools:layout="@layout/fragment_workouts" />
+    <fragment
+        android:id="@+id/food"
+        android:name="com.example.cm3110.Food"
+        android:label="fragment_food"
+        tools:layout="@layout/fragment_food" />
+    <fragment
+        android:id="@+id/userInfo"
+        android:name="com.example.cm3110.UserInfo"
+        android:label="fragment_user_info"
+        tools:layout="@layout/fragment_user_info" >
+        <action
+            android:id="@+id/action_userInfo_to_ladningInput"
+            app:destination="@id/ladningInput" />
+    </fragment>
+</navigation>
